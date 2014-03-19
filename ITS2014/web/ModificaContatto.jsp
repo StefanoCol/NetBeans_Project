@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Modifica Contatto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <style>
+            .title{
+                text-align:center;
+            }
+            
+            .row{
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body class="container">
+        <div class="row">
+            <div class="col-xs-12 title">
+                <h1>Modifica contatto</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <form>
+                    <input type="hidden" 
+                           id="contatto_id" 
+                           value='<%= request.getParameter("ContattoId") %>'
+                           />
+                    <fieldset>
+                        <label for="cognome">Cognome</label>
+                        <input type="text" id="cognome" />
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" />
+                        <label for="email">E-Mail</label>
+                        <input type="text" id="email" />                    
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-xs-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <a href="#" id="modifica">Aggiorna</a>
+            </div>
+        </div>
+        <script src='Scripts/jquery-1.11.0.js'></script>
+        <script src='Scripts/modifica-contatto.js'></script>
+    </body>
+</html>
